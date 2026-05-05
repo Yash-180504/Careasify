@@ -82,9 +82,12 @@ export const metadata: Metadata = {
     google: "TrDdwJhk3616xV00e9VGRUb4EYX4s58ZmNBKyxs2OCM",
   },
   icons: {
-    icon: "/icons/careas-logo.png",
-    shortcut: "/icons/careas-logo.png",
-    apple: "/icons/icon-512.png",
+    icon: [
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/icons/favicon-32x32.png",
+    apple: "/icons/apple-touch-icon.png",
   },
 };
 

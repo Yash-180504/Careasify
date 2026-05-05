@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import PWARegister from "@/components/PWARegister";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: {
@@ -160,6 +161,7 @@ export default function RootLayout({
         <Providers>
           {children}
           <PWARegister />
+          <WhatsAppButton />
         </Providers>
       </body>
     </html>

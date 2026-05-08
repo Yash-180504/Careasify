@@ -7,10 +7,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const services = [
-  { img: '/images/exterior.png', title: 'Exterior Waterless Wash', desc: 'Eco-friendly carnauba wax formula that cleans, shines & protects — no water needed.', duration: '30 min' },
-  { img: '/images/interior.png', title: 'Interior Deep Clean', desc: 'Full vacuum, dashboard dressing, seat clean & air freshener for a showroom-fresh cabin.', duration: '45 min' },
+  { img: '/images/exterior.png', title: 'Exterior Lesswater Wash', desc: 'Eco-friendly Careasify special dry wash formula that cleans, shines & protects.', duration: '30 min' },  { img: '/images/interior.png', title: 'Interior Deep Clean', desc: 'Full vacuum, dashboard dressing, seat clean & proper boot clean for a showroom-fresh cabin.', duration: '45 min' },
   { img: '/images/fullwash.png', title: 'Complete Car Spa', desc: 'Our most popular package — full interior + exterior cleaning with tire polish.', duration: '60 min' },
-  { img: '/images/detailing.png', title: 'Premium Detailing', desc: 'Machine polish, ceramic coating, engine bay clean & paint correction for the ultimate finish.', duration: '3 hrs' },
 ];
 
 const steps = [
@@ -38,10 +36,10 @@ const testimonials = [
 ];
 
 const faqs = [
-  { q: 'What is Careasify and how does it work?', a: 'Careasify is a premium doorstep car washing and detailing platform. Simply create an account, add your vehicle, pick a service, and schedule a convenient time. Our trained executive arrives at your location with all equipment needed — no water connection required from your end.' },
+  { q: 'What is Careasify and how does it work?', a: 'Careasify is a premium doorstep car washing platform. Simply <a href="/#contact" style="color: var(--accent-blue); font-weight: 600; text-decoration: underline;">contact us</a>, add your vehicle details, pick a service, and schedule a convenient time. Our trained executive arrives at your location with all equipment needed.' },
   { q: 'What is waterless car washing? Is it safe?', a: 'Waterless cleaning uses a special carnauba wax-based spray formula that encapsulates dirt particles, lifts them safely off the surface, and leaves behind a protective, glossy coat. It\'s 100% paint-safe, eco-friendly, and saves over 150 liters of water per wash compared to traditional methods.' },
-  { q: 'How do I get a pricing quote?', a: 'Simply fill out the contact form on our website or call us directly. Our team will provide a personalized quote based on your vehicle type, chosen services, and frequency. We offer flexible plans to suit every budget.' },
-  { q: 'Can I book an on-demand wash without a subscription?', a: 'Absolutely! You can book a one-time wash or detailing service anytime. Simply contact us, select the service, pick your time slot, and we\'ll be there. On-demand bookings are perfect for occasional deep cleans or when guests are coming over!' },
+  { q: 'How do I get a pricing quote?', a: 'Simply fill out the <a href="/#contact" style="color: var(--accent-blue); font-weight: 600; text-decoration: underline;">contact form</a> on our website or <a href="tel:+917022099595" style="color: var(--accent-blue); font-weight: 600; text-decoration: underline;">call us</a> directly. Our team will provide a personalized quote based on your vehicle type, chosen services, and frequency. We offer flexible plans to suit every budget.' },
+  { q: 'Can I book an on-demand wash without a subscription?', a: 'Absolutely! You can book a one-time wash or detailing service anytime. Simply <a href="/#contact" style="color: var(--accent-blue); font-weight: 600; text-decoration: underline;">contact us</a>, select the service, pick your time slot, and we\'ll be there. On-demand bookings are perfect for occasional deep cleans or when guests are coming over!' },
   { q: 'What areas do you currently serve?', a: 'We currently operate in major cities across India including Bangalore, Mumbai, Delhi NCR, Hyderabad, and Pune. We\'re rapidly expanding — enter your city during registration to check availability or get notified when we launch in your area.' },
   { q: 'What if I\'m not satisfied with the service?', a: 'Your satisfaction is our top priority. If you\'re not completely happy with any wash, let us know within 24 hours and we\'ll send our executive to redo it at zero extra cost. We also have a dedicated quality team that monitors every service.' },
 ];
@@ -92,7 +90,7 @@ export default function HomePage() {
                 Your Car Deserves <span className="text-gradient">Premium Care</span> at Your Doorstep
               </h1>
               <p className="hero-description">
-                Professional car wash &amp; detailing — delivered to your home, office, or parking spot. Book on-demand or subscribe for daily care. Contact us for custom pricing.
+                Professional car wash — delivered to your home, office, or parking spot. Book on-demand or subscribe for daily care. Contact us for custom pricing.
               </p>
               <div className="hero-buttons">
                 <Link href="/#contact" className="btn btn-primary btn-lg">
@@ -153,7 +151,7 @@ export default function HomePage() {
                   <h4 className="service-card-title">{s.title}</h4>
                   <p className="service-card-desc">{s.desc}</p>
                   <div className="service-card-footer">
-                    <span className="service-card-price" style={{ fontSize: '0.9rem', fontWeight: 600 }}>Contact for pricing</span>
+                    <Link href="/#contact" className="service-card-price" style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--accent-blue)', cursor: 'pointer', textDecoration: 'underline' }}>Contact for pricing</Link>
                     <span className="service-card-duration">⏱ {s.duration}</span>
                   </div>
                 </div>
@@ -262,7 +260,7 @@ export default function HomePage() {
                 <div className="contact-info-icon">🕐</div>
                 <div>
                   <div className="contact-info-title">Working Hours</div>
-                  <div className="contact-info-text">Mon - Sun, 7:00 AM — 9:00 PM</div>
+                  <div className="contact-info-text">Tues - Sun, 6:00 AM — 8:00 PM</div>
                 </div>
               </div>
             </div>
@@ -399,7 +397,7 @@ export default function HomePage() {
                   <span>{faq.q}</span>
                   <span className="faq-icon">+</span>
                 </button>
-                <div className="faq-answer">{faq.a}</div>
+                <div className="faq-answer" dangerouslySetInnerHTML={{ __html: faq.a }} />
               </div>
             ))}
           </div>
